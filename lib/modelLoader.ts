@@ -101,7 +101,7 @@ async function initializeModel(
       MODEL_CONFIG.task,
       MODEL_CONFIG.model,
       {
-        // @ts-expect-error - device option is valid for ONNX runtime but not in type definitions
+        // @ts-ignore - device option is valid for ONNX runtime but not in type definitions
         device: MODEL_CONFIG.device,
         progress_callback: (progressData: ProgressInfo) => {
           // Normalize progress data
